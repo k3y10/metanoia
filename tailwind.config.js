@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
         colors: {
-          lightlaven: '#913D88',
+          lightpeach: '#F69E72',
         },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

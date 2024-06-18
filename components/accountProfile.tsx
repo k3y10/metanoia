@@ -7,7 +7,6 @@ const AccountProfile: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
-  const [bio, setBio] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [user, setUser] = useState<any>(null);
@@ -98,20 +97,11 @@ const AccountProfile: React.FC = () => {
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
           />
         </label>
-        <label className="block">
-          Bio:
-          <textarea
-            value={bio}
-            onChange={(e) => setBio(e.target.value)}
-            placeholder="Bio"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-          />
-        </label>
         {user ? (
           <button
             onClick={handleUpdateProfile}
             disabled={loading}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            className="mt-4 px-4 py-2 bg-black text-white rounded-md hover:bg-lightpeach focus:outline-none focus:ring-2 focus:ring-blue-200"
           >
             {loading ? 'Updating...' : 'Update Profile'}
           </button>

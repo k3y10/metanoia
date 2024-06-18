@@ -4,18 +4,15 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import NextImage from 'next/image';
 import Link from 'next/link';
 
-import LogoImage from '@/public/titlelogo.png'
+import LogoImage from '@/public/mmlogo.png'
 import HeaderNavLink from './HeaderNavLink';
 
 const menuItems = [
   { label: `Reflex`, url: `reflex` },
-  { label: `Kombo`, url: `kombo` },
+  { label: `Kambo`, url: `kambo` },
   { label: `About`, url: `about` },
   { label: `Schedule`, url: `schedule` },
   { label: `Account`, url: `account` },
-
-
-  { label: 'Log out', url: '/' },
 ];
 
 const NavMenu: React.FC<NavMenuProps> = ({}) => {
@@ -45,7 +42,7 @@ const NavMenu: React.FC<NavMenuProps> = ({}) => {
             <div className='flex h-16 justify-between'>
               <div className='flex px-2 lg:px-0'>
                 <div className='flex flex-shrink-0 items-center'>
-                  <Link href="/about">
+                  <Link href="/">
                     <NextImage
                       className='h-12 w-auto'
                       src={LogoImage}
@@ -73,7 +70,7 @@ const NavMenu: React.FC<NavMenuProps> = ({}) => {
                 </div>
               </div>
               <div className='flex items-center lg:hidden'>
-                <Disclosure.Button className='relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightlaven'>
+                <Disclosure.Button className='relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightpeach'>
                   <span className='absolute -inset-0.5' />
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
@@ -92,7 +89,7 @@ const NavMenu: React.FC<NavMenuProps> = ({}) => {
               {menuItems.map((item) => {
                 return (
                   <Link href={item.url} key={item.label}>
-                  <div className='block py-2 text-base font-medium text-gray-600 hover:text-lightlaven'>
+                  <div className='block py-2 text-base font-medium text-gray-600 hover:text-lightpeach'>
                     {item.label === 'Launch App' ? (
                       <button className='text-white bg-purple-400 px-3 py-2 rounded-full'>
                         {item.label}

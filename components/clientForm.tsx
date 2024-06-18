@@ -85,6 +85,8 @@ const ClientForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+    <h2 className="text-2xl mb-12 text-center">Foot Zoning Form</h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-black">
         <label className="block">
           Name:
@@ -173,7 +175,7 @@ const ClientForm: React.FC = () => {
           <input type="date" name="guardianDate" value={formData.guardianDate} onChange={handleChange} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
         </label>
       </div>
-      <button type="submit" className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200">
+      <button type="submit" className="mt-4 px-4 py-2 bg-black text-white rounded-md hover:bg-lightpeach focus:outline-none focus:ring-2 focus:ring-blue-200">
         Submit
       </button>
     </form>

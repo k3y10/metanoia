@@ -1,18 +1,20 @@
-import './globals.css'
+import './globals.css';
+import Footer from '@/components/layouts/Footer';
+import Header from '@/components/layouts/Header';
 
 export const metadata = {
   title: 'Mystical Metanoia',
   description: 'Mystical Metanoia',
-}
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
-  )
+  );
 }
